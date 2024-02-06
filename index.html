@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet"  href="style.css">
+</head>
+<body>
+
+  <div class="image-gallery">
+    <h2>Image Gallery</h2>
+    <p>Basic image gallery with thumbnail images that enlarge when clicked.</p>
+  <!-- The four columns -->
+    <div class="row">
+      <div class="column">
+        <img src="img/image1.jpeg" alt=""  onclick="myFunction(this);">
+      </div>
+      <div class="column">
+        <img src="img/image2.jpeg" alt=""  onclick="myFunction(this);">
+      </div>
+      <div class="column">
+        <img src="img/image3.jpeg" alt=""  onclick="myFunction(this);">
+      </div>
+      <div class="column">
+        <img src="img/image4.jpeg" alt=""  onclick="myFunction(this);">
+      </div>
+      <div class="column">
+        <img src="img/image5.jpeg" alt=""  onclick="myFunction(this);">
+      </div><div class="column">
+        <img src="img/image6.jpeg" alt=""  onclick="myFunction(this);">
+      </div>
+    </div>
+
+    <div class="container">
+      <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+      <img id="expandedImg" style="width:100%">
+      <div id="imgtext"></div>
+    </div>
+  </div>
+
+  <div class="slideshow">
+    <h2>Image Slideshow</h2>
+
+    <div class="slideshow-container loop">
+      <div class="wrapper">
+          <img src="img/image1.jpeg">
+          <img src="img/image2.jpeg">
+          <img src="img/image3.jpeg">
+          <img src="img/image4.jpeg">
+          <img src="img/image5.jpeg">
+          <img src="img/image6.jpeg">
+
+      </div>
+    </div>
+  </div>
+  <script>
+    function myFunction(imgs) {
+  var expandImg = document.getElementById("expandedImg");
+  expandImg.src = imgs.src;
+  expandImg.parentElement.style.display = "block";
+}
+  </script>
+
+</body>
+</html>
